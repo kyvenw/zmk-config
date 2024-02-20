@@ -38,7 +38,8 @@
         reset_bluetooth: reset_bluetooth {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_CLR_ALL &bt BT_SEL 0>;
+            bindings = <&macro_press>, <&bt BT_CLR_ALL &bt BT_SEL 0>;
+
             label = "RESET_BLUETOOTH";
         };
     };
