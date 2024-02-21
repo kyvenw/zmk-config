@@ -35,13 +35,13 @@
     };
 
     macros {
-        reset_bluetooth: reset_bluetooth {
+        reset_bluetooth_0: reset_bluetooth_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&bt BT_CLR_ALL &bt BT_DISC 4 &bt BT_SEL 4>;
-            label = "RESET_BLUETOOTH";
+                <&bt BT_CLR &bt BT_SEL 0>;
+            label = "RESET_BLUETOOTH_0";
         };
     };
 
@@ -90,7 +90,7 @@
 
         admin {
             bindings = <
-&reset_bluetooth  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans
 &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans
 &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
 &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans
